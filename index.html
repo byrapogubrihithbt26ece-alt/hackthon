@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10131b">
+    <meta name="description" content="A temporary local hub for FreeLLMAPI, free-claude-code, and Hackthon.">
+    <title>Three-project workspace</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Three-project workspace home">
+          <span class="brand-mark" aria-hidden="true">3</span>
+          <span>WORKSPACE / TEMPORARY HUB</span>
+        </a>
+        <span class="status"><span aria-hidden="true"></span> Local-first · separate repos</span>
+      </header>
+
+      <section class="hero" id="top">
+        <p class="eyebrow">ONE PLACE TO START</p>
+        <h1>Three projects.<br><span>One clear workspace.</span></h1>
+        <p class="intro">
+          A lightweight launchpad for finding each repository, understanding how the pieces relate,
+          and opening the project you need. The codebases stay independent—this page does not merge
+          them or add product features.
+        </p>
+        <a class="jump-link" href="#projects">Explore the projects <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE THREE REPOS</p>
+            <h2 id="projects-title">Pick up where you need to</h2>
+          </div>
+          <span class="count">01 — 03</span>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card api-card">
+            <div class="card-top">
+              <span class="project-number">01</span>
+              <span class="tag">LOCAL API</span>
+            </div>
+            <h3>FreeLLMAPI</h3>
+            <p class="repo-label">tashfeenahmed / freellmapi</p>
+            <p class="card-copy">
+              The model-serving endpoint in this setup. When you run it locally, its OpenAI-compatible
+              API is available at <code>http://localhost:3001/v1</code>.
+            </p>
+            <a class="card-link" href="https://github.com/tashfeenahmed/freellmapi">
+              Open FreeLLMAPI <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="project-card claude-card">
+            <div class="card-top">
+              <span class="project-number">02</span>
+              <span class="tag">CLIENT PROJECT</span>
+            </div>
+            <h3>free-claude-code</h3>
+            <p class="repo-label">Repository lookup</p>
+            <p class="card-copy">
+              Keep this project in its own checkout and use its own README and configuration for
+              setup. No compatibility or plugin support is assumed by this hub.
+            </p>
+            <a class="card-link" href="https://github.com/search?q=free-claude-code&amp;type=repositories">
+              Find free-claude-code on GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="project-card hackthon-card">
+            <div class="card-top">
+              <span class="project-number">03</span>
+              <span class="tag">HACKATHON REPO</span>
+            </div>
+            <h3>Hackthon</h3>
+            <p class="repo-label">byrapogubrihithbt26ece-alt / hackthon</p>
+            <p class="card-copy">
+              The hackathon project repository. This temporary page is only a navigation and setup
+              note; it is not the Hackthon product or a replacement for its app.
+            </p>
+            <a class="card-link" href="https://github.com/byrapogubrihithbt26ece-alt/hackthon">
+              Open Hackthon <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="flow" aria-labelledby="flow-title">
+        <div class="flow-copy">
+          <p class="eyebrow">HOW THEY RELATE</p>
+          <h2 id="flow-title">Connect by configuration, not by copying code.</h2>
+          <p>
+            FreeLLMAPI provides a local endpoint. A client or project can use that endpoint only if
+            its own documented settings support it. Hackthon remains its own repository. This hub
+            does not configure or connect the projects automatically.
+          </p>
+        </div>
+        <div class="flow-diagram" aria-label="FreeLLMAPI endpoint, client project, and Hackthon are separate projects">
+          <div class="flow-node"><span class="node-index">01</span><strong>FreeLLMAPI</strong><small>local endpoint</small></div>
+          <span class="flow-arrow" aria-hidden="true">↔</span>
+          <div class="flow-node"><span class="node-index">02</span><strong>free-claude-code</strong><small>check its own docs</small></div>
+          <span class="flow-divider" aria-hidden="true"></span>
+          <div class="flow-node"><span class="node-index">03</span><strong>Hackthon</strong><small>separate repo</small></div>
+        </div>
+      </section>
+
+      <section class="setup" aria-labelledby="setup-title">
+        <div class="setup-heading">
+          <p class="eyebrow">RUN THIS HUB LOCALLY</p>
+          <h2 id="setup-title">No build step. No dependencies.</h2>
+          <p>From the Hackthon repository root, start Python's built-in static file server:</p>
+        </div>
+        <div class="command">
+          <span class="command-label">TERMINAL</span>
+          <code>python -m http.server 8000 --bind 127.0.0.1</code>
+          <span class="command-next">Then open <a href="http://localhost:8000">http://localhost:8000</a></span>
+        </div>
+        <div class="safety-note">
+          <span class="note-icon" aria-hidden="true">!</span>
+          <p><strong>Keep credentials out of the hub.</strong> FreeLLMAPI's key belongs in the
+            environment or configuration of the service/client that needs it—never in this page,
+            a URL, or a committed file. The endpoint is local to your machine; this page makes no
+            API calls.</p>
+        </div>
+      </section>
+
+      <footer>
+        <span>Temporary project hub · Static files only</span>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </main>
+  </body>
+</html>
